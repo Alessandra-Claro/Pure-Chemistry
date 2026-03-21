@@ -71,12 +71,12 @@
                 </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                 
-            <div class="article-card group">
-                    <div class="overflow-hidden rounded-3xl aspect-square mb-6">
-                        <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=600" class="group-hover:scale-110 transition-transform duration-700 w-full h-full object-cover">
-                    </div>
-                    <span class="mono-label text-xs text-emerald-700">Neuro-Chemistry</span>
-                    <h3 class="text-2xl font-['Playfair_Display'] mt-2 group-hover:text-emerald-800 transition">Lavender Chemistry on the Brain.</h3>
+            <div class="article-card group" onclick="openPreview('lavender')">
+                <div class="overflow-hidden rounded-3xl aspect-square mb-6">
+                    <img src="https://images.unsplash.com/photo-1595981267035-2104546cf179?auto=format&fit=crop&q=80&w=600" class="group-hover:scale-110 transition-transform duration-700 w-full h-full object-cover">
+                </div>
+                <span class="mono-label text-xs text-emerald-700">Neuro-Chemistry</span>
+                <h3 class="text-2xl font-['Playfair_Display'] mt-2 group-hover:text-emerald-800 transition">Lavender Chemistry on the Brain.</h3>
             </div>
             
                 <div class="article-card group">
@@ -87,13 +87,13 @@
                     <h3 class="text-2xl font-['Playfair_Display'] mt-2 group-hover:text-emerald-800 transition">Melatonin and the Light Switch.</h3>
                 </div>
             
-                <div class="article-card group">
-                    <div class="overflow-hidden rounded-3xl aspect-square mb-6">
-                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=600" class="group-hover:scale-110 transition-transform duration-700 w-full h-full object-cover">
-                    </div>
-                    <span class="mono-label text-xs text-emerald-700">Structural Chemistry</span>
-                    <h3 class="text-2xl font-['Playfair_Display'] mt-2 group-hover:text-emerald-800 transition">Vitamin C and the Skin's Structure.</h3>
+            <div class="article-card group" onclick="openPreview('vitaminc')">
+                <div class="overflow-hidden rounded-3xl aspect-square mb-6">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=600" class="group-hover:scale-110 transition-transform duration-700 w-full h-full object-cover">
                 </div>
+                <span class="mono-label text-xs text-emerald-700">Structural Chemistry</span>
+                <h3 class="text-2xl font-['Playfair_Display'] mt-2 group-hover:text-emerald-800 transition">Vitamin C and the Skin's Structure.</h3>
+            </div>
             
             </div>
         </div>
@@ -114,5 +114,90 @@
         <p class="mono-label text-gray-300">&copy; © 2026 PureChemistry — Engineered by Alessa</p>
     </footer>
 
+    <div id="articleModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-6">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-md" onclick="closeModal()"></div>
+    
+    <div class="relative bg-white w-full max-w-3xl max-h-[80vh] overflow-y-auto rounded-[3rem] p-12 shadow-2xl">
+        <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-400 hover:text-black transition"><i class="fa-solid fa-xmark text-2xl"></i></button>
+        
+        <div id="modalBody">
+            </div>
+    </div>
+</div>
+
+<script>
+    const articles = {
+    lavender: {
+                title: "Lavender Chemistry on the Brain",
+                // This is your short summary for the first popup
+                desc: "Abstract: This paper examines the terpene alcohol Linalool ($C_{10}H_{18}O$) and its role as a non-synthetic anxiolytic. Lavender has long been used for sedation, but the molecular mechanism was unverified until recent trials showed its interaction with the GABAergic system.",
+                // This is the full research paper that shows after clicking "Read Now"
+                full: `
+                    <h3 class="font-bold text-black mb-2">Introduction</h3>
+                    <p class="mb-6">Lavender has long been used for sedation, but the molecular mechanism was unverified until recent trials showed its interaction with the GABAergic system.</p>
+                    
+                    <h3 class="font-bold text-black mb-2">Analysis</h3>
+                    <p class="mb-6">Linalool acts as a competitive antagonist at NMDA receptors. By modulating the Glutamate system and enhancing GABA(A) receptor function, it creates a "biological brake" on the central nervous system.</p>
+                    
+                    <h3 class="font-bold text-black mb-2">Conclusion</h3>
+                    <p>The study confirms that Linalool provides a significant sedative effect by physically altering neuronal firing rates, offering a clinical basis for its use in systemic wellness.</p>
+                `,
+                sources: "1. Journal of Natural Medicines (2021) - 'The Anxiolytic Effects of Linalool.'<br>2. Neuropharmacology Review - 'Terpene Interaction with NMDA Receptors.'"
+            },
+            vitaminc: {
+                title: "Vitamin C and the Skin's Structure",
+                // Short summary
+                desc: "Abstract: An investigation into L-ascorbic acid as a mandatory co-factor for the stabilization of the collagen triple helix. Dermal integrity relies on the hydroxylation of proline and lysine.",
+                // Full Research Paper
+                full: `
+                    <h3 class="font-bold text-black mb-2">Introduction</h3>
+                    <p class="mb-6">Dermal integrity relies on the hydroxylation of proline and lysine. This process requires a reducing agent to maintain enzymatic activity within the skin's structural layers.</p>
+                    
+                    <h3 class="font-bold text-black mb-2">Analysis</h3>
+                    <p class="mb-6">Vitamin C donates electrons to maintain iron atoms in their ferrous ($Fe^{2+}$) state. Without this redox reaction, the enzyme prolyl hydroxylase becomes inactive, leading to the systemic failure of collagen production.</p>
+                    
+                    <h3 class="font-bold text-black mb-2">Conclusion</h3>
+                    <p>By maintaining the redox cycle, Vitamin C acts as the primary engine for skin density and repair, proving that aesthetic radiance is a direct result of chemical stabilization.</p>
+                `,
+                sources: "1. American Journal of Clinical Dermatology - 'The Role of Vitamin C in Skin Health.'<br>2. Biochemistry Vol. 54 - 'Redox Reactions in Extracellular Matrix Assembly.'"
+            }
+        };
+
+    function openPreview(id) {
+        const art = articles[id];
+        const modal = document.getElementById('articleModal');
+        const body = document.getElementById('modalBody');
+        
+        modal.classList.remove('hidden');
+        body.innerHTML = `
+            <span class="mono-label text-emerald-700">Research Abstract</span>
+            <h2 class="text-4xl font-['Playfair_Display'] my-6">${art.title}</h2>
+            <div class="text-lg text-gray-600 leading-relaxed mb-10">
+                ${art.desc}
+            </div>
+            <button onclick="showFull('${id}')" class="btn-primary">Read Full Paper</button>
+        `;
+    }
+
+    function showFull(id) {
+        const art = articles[id];
+        const body = document.getElementById('modalBody');
+        body.innerHTML = `
+            <span class="mono-label text-gray-400">Full Research Paper</span>
+            <h2 class="text-4xl font-['Playfair_Display'] my-4">${art.title}</h2>
+            <div class="prose max-w-none text-gray-700 leading-relaxed font-serif">
+                ${art.full}
+            </div>
+            <hr class="my-8 border-gray-100">
+            <h4 class="mono-label text-xs mb-4">Sources & Citations</h4>
+            <p class="text-xs text-gray-400">${art.sources}</p>
+        `;
+    }
+
+    function closeModal() {
+        document.getElementById('articleModal').classList.add('hidden');
+    }
+</script>
+    
 </body>
 </html>
