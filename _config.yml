@@ -1,14 +1,13 @@
 title: SciTech
-description: A space of science and technology. Blogging for an intelligence glow up!
-baseurl: "/SciTech" 
+description: The Neurobiology of Gorgeous.
+baseurl: "/SciTech"
 url: "https://alessacsardi.github.io"
 
-# 2026 Luxury Palette
+# Fixed Color Keys
 colors:
-  cream: "#f4efe6"   # Botanical Cream background
-  emerald: "#0b3d2e" # Deep Forest Luxe accent
-  gold: "#D5B038"    # Metallic Gold detail
-  black: "#000000"   # Logo & High-contrast text
+  cream: "#f4efe6"
+  emerald: "#0b3d2e"
+  gold: "#D5B038"
+  black: "#000000"
 
-# Leave theme blank to use your custom editorial layout
-theme:
+theme: # Keep this blank
