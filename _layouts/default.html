@@ -4,40 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | SciTech</title>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Style+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
   <header class="site-header">
-    <div class="wrapper">
-      <a class="site-title" href="{{ '/' | relative_url }}">
+    <div class="header-wrapper">
+      <a class="logo" href="{{ '/' | relative_url }}">
         <span class="logo-sci">sci</span><span class="logo-tech">tech</span>
       </a>
       <nav class="site-nav">
-        <div class="trigger">
-          <a class="page-link" href="{{ '/' | relative_url }}">home</a>
-          <a class="page-link" href="{{ '/purpose' | relative_url }}">purpose</a>
-          <a class="page-link" href="{{ '/articles' | relative_url }}">articles</a>
-          <a class="page-link" href="{{ '/contact' | relative_url }}">contact us</a>
-        </div>
+        <a class="nav-link" href="{{ '/' | relative_url }}">home</a>
+        <a class="nav-link" href="{{ '/purpose' | relative_url }}">purpose</a>
+        <a class="nav-link" href="{{ '/articles' | relative_url }}">articles</a>
+        <a class="nav-link" href="{{ '/contact' | relative_url }}">contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="page-content">
-    <div class="wrapper">
+  <main class="fade-in">
+    <div class="content-wrapper">
       {{ content }}
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrapper">
-      <p>&copy; 2026 SciTech | The Science of Gorgeous</p>
-    </div>
+    <p>&copy; 2026 SciTech — Science Meets Aesthetic Authority</p>
   </footer>
 </body>
 </html>
