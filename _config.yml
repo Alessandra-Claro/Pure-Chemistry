@@ -1,16 +1,14 @@
 title: SciTech
-description: A space where science meets beauty.
-
-# SYNC SETTINGS: Vital for /SciTech/
-baseurl: "/SciTech"
+description: The Neurobiology of Gorgeous.
+baseurl: "/SciTech" 
 url: "https://alessacsardi.github.io"
 
-# Relaxing Aura Palette
+# 2026 Luxury Palette
 colors:
-  beige: "#f4efe6"
-  emerald: "#0b3d2e"
-  gold: "#D5B038"
-  text: "#2b2b2b"
+  cream: "#f4efe6"   # Botanical Cream background
+  emerald: "#0b3d2e" # Deep Forest Luxe accent
+  gold: "#D5B038"    # Metallic Gold detail
+  black: "#000000"   # Logo & High-contrast text
 
-# DELETE the 'theme: none' line. If you want no theme, just leave it empty like this:
+# Leave theme blank to use your custom editorial layout
 theme:
