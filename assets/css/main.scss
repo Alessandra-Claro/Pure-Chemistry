@@ -1,29 +1,57 @@
 ---
 ---
-/* The dashes above are required! */
+/* These dashes are required for Jekyll to process the CSS! */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Style+Script&display=swap');
+/* Color Palette */
+$beige: #f4efe6;
+$emerald: #0b3d2e;
+$gold: #D5B038;
+$text-dark: #2b2b2b;
 
 body {
-  background-color: {{ site.colors.beige }};
-  color: {{ site.colors.text }};
-  font-family: 'Georgia', serif;
+  background-color: $beige;
+  color: $text-dark;
+  font-family: 'Playfair Display', serif; /* High-end magazine feel */
   margin: 0;
   padding: 0;
 }
 
-/* Styled Logo */
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo Styling */
 .logo-sci {
-  font-family: 'Style Script', cursive;
-  font-weight: 300;
-  color: {{ site.colors.emerald }};
-  font-size: 3rem;
+  font-family: 'Style Script', cursive; /* Thin, elegant cursive */
+  font-weight: 400;
+  color: $emerald;
+  font-size: 3.5rem;
+  text-transform: lowercase;
+  margin-right: -5px; /* Tucks 'tech' slightly closer */
 }
 
 .logo-tech {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Bold, print, thick */
   font-weight: 900;
-  text-transform: uppercase;
-  color: {{ site.colors.gold }};
+  color: $gold;
   font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Minimalist Nav Links */
+.site-nav.page-link {
+  color: $emerald;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: lowercase;
+}
+
+.site-header {
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(11, 61, 46, 0.1);
 }
