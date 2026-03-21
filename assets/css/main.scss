@@ -1,28 +1,23 @@
 ---
 ---
-@import "minima";
+/* The dashes above are required! */
 
-/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Style+Script&display=swap');
 
 body {
   background-color: {{ site.colors.beige }};
   color: {{ site.colors.text }};
-  font-family: 'Georgia', serif; /* Elegant, editorial feel */
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Specific Logo Styling */
-.site-title {
-  font-size: 2.5rem!important;
-  letter-spacing: -1px;
-}
-
+/* Styled Logo */
 .logo-sci {
   font-family: 'Style Script', cursive;
   font-weight: 300;
   color: {{ site.colors.emerald }};
-  text-transform: none;
-  margin-right: -5px; /* Tucking the words closer */
+  font-size: 3rem;
 }
 
 .logo-tech {
@@ -30,18 +25,5 @@ body {
   font-weight: 900;
   text-transform: uppercase;
   color: {{ site.colors.gold }};
-}
-
-/* Relaxing Navigation Style */
-.site-nav {
-  background-color: transparent;
- .page-link {
-    color: {{ site.colors.emerald }}!important;
-    font-weight: 600;
-    text-transform: lowercase; /* Minimalist, modern look */
-  }
-}
-
-h1, h2, h3 {
-  color: {{ site.colors.emerald }};
+  font-size: 2.5rem;
 }
