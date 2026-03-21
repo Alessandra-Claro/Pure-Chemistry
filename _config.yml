@@ -1,18 +1,14 @@
 title: SciTech
-email: your-email@example.com
-description: >-
-  A space where science meets beauty. Exploring the neurobiology 
-  of wellness and the tech behind the glow.
-baseurl: "" 
+# CHANGE THIS: Add your repository name here
+baseurl: "/SciTech" 
 url: "https://alessacsardi.github.io"
 
-# Color Palette (Relaxing Aura)
+# Relaxing Aura Palette
 colors:
   beige: "#f4efe6"
   emerald: "#0b3d2e"
   gold: "#D5B038"
   text: "#2b2b2b"
 
-theme: minima # A lightweight base to build your custom styles on
-plugins:
-  - jekyll-feed
+# Ensure Jekyll doesn't use the default theme that is overriding your styles
+theme: none
