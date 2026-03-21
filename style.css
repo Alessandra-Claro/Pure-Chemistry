@@ -1,0 +1,76 @@
+/* GLOBAL SETTINGS */
+html { scroll-behavior: smooth; }
+
+/* UTILITY CLASSES */
+.mono-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.nav-link-style {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #0b3d2e;
+    transition: opacity 0.3s ease;
+}
+.nav-link-style:hover { opacity: 0.5; }
+
+/* TITLES */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #000 0%, #0b3d2e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtext {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #4b5563;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* BUTTONS (Tactile/Tangle inspired) */
+.btn-primary {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* CARDS */
+.article-card {
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
