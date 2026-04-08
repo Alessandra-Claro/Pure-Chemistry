@@ -1,2 +1,2 @@
 # SciTech
-A space of science and technology. Blogging for an intelligence glow up!
+A space of science and technology. Blogging for an intelligent glow up!
