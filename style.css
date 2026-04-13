@@ -42,11 +42,20 @@ html { scroll-behavior: smooth; }
 }
 
 .section-subtext {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif; /* Changed from Playfair Display */
+    font-size: 1.1rem; /* Slightly smaller because Montserrat is wider */
     color: #4b5563;
-    font-style: italic;
+    font-style: normal; /* Removing italic makes it much cleaner */
     line-height: 1.6;
+}
+
+/* Update the Purpose statement */
+/* Locate the "section id=purpose" paragraph in your HTML or add this to CSS */
+#purpose p {
+    font-family: 'Montserrat', sans-serif !important; 
+    font-style: normal !important;
+    font-weight: 500;
+    letter-spacing: -0.01em;
 }
 
 /* BUTTONS (Tactile/Tangle inspired) */
